@@ -246,7 +246,7 @@ const App = () => {
                    <div className="absolute inset-0 bg-gradient-to-tr from-[#e040a0] via-[#7c52aa] to-[#0096cc] rounded-full blur-md opacity-20" />
                    <div className="w-48 h-48 rounded-full border-[6px] border-white shadow-2xl relative overflow-hidden bg-white">
                       <img 
-                        src="/avatar_pixel.png" 
+                        src="avatar_pixel.png" 
                         alt="Nirmiti Tamore" 
                         className="w-full h-full object-cover pixelated"
                         onError={(e) => {
