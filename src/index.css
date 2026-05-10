@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#fef7ff] text-[#2e1a28] antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer components {
+  .rounded-pill {
+    border-radius: 9999px;
+  }
+
+  .shadow-candy-pink {
+    box-shadow: 0 10px 30px -10px rgba(224, 64, 160, 0.3);
+  }
+
+  .shadow-candy-purple {
+    box-shadow: 0 10px 30px -10px rgba(124, 82, 170, 0.3);
+  }
+
+  .candy-glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white;
+  }
+
+  .candy-gradient {
+    background: radial-gradient(circle at 0% 0%, #fff5f9 0%, #fef7ff 100%);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-candy-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-candy-pink_fixed rounded-full border-4 border-candy-bg;
+}
