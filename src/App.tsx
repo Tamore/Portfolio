@@ -72,7 +72,7 @@ const App = () => {
         >
           <div className="absolute inset-0 border-4 border-[#e040a0]/20 rounded-full animate-ping" />
           <div className="w-20 h-20 bg-gradient-to-tr from-[#e040a0] to-[#7c52aa] rounded-full flex items-center justify-center shadow-lg shadow-pink-200 overflow-hidden">
-            <img src="/mascot.png" alt="Mascot" className="w-full h-full object-cover animate-pulse" />
+            <img src="mascot.png" alt="Mascot" className="w-full h-full object-cover animate-pulse" />
           </div>
         </motion.div>
       </div>
@@ -92,7 +92,7 @@ const App = () => {
                className="w-12 h-12 rounded-full border-2 border-[#e040a0] shadow-lg relative overflow-hidden bg-white shrink-0"
              >
                <img 
-                 src="/mascot.png" 
+                 src="mascot.png" 
                  alt="Mascot" 
                  className="w-full h-full object-cover"
                />
@@ -145,7 +145,7 @@ const App = () => {
            <div className="flex items-center gap-4">
               <div className="lg:hidden flex items-center gap-2">
                   <div className="w-8 h-8 bg-white border border-pink-100 rounded-lg flex items-center justify-center shadow-lg shadow-pink-100 overflow-hidden">
-                     <img src="/mascot.png" alt="Mascot" className="w-6 h-6 object-contain" />
+                     <img src="mascot.png" alt="Mascot" className="w-6 h-6 object-contain" />
                   </div>
                  <span className="font-black text-sm">NT Portfolio</span>
               </div>
