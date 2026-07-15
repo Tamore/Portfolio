@@ -441,19 +441,19 @@ const App = () => {
              <motion.div layout className="flex flex-wrap justify-center gap-6">
                 <AnimatePresence mode="popLayout">
                 {[
-                  { title: 'Sahara AI', ident: 'AI-101', tags: ['Next.js', 'AI Agents'], category: 'AI', desc: 'Enterprise-grade Multi-Agent Task Processing Platform with distributed infrastructure.', color: '#0096cc', icon: <TerminalIcon />, link: 'https://github.com/Tamore/ai-task-app' },
-                  { title: 'Yomi OS', ident: 'SYS-505', tags: ['Agent Pipeline', 'React'], category: 'AI', desc: 'Autonomous 6-stage AI Agent Pipeline integrated into a cybernetic state management system.', color: '#e040a0', icon: <Cpu />, link: '#' },
-                  { title: 'PitchControl', ident: 'SYS-110', tags: ['Next.js', 'AI Agents'], category: 'Web', desc: 'A next-generation AI orchestration platform designed to completely revolutionize stadium operations for the 2026 FIFA World Cup.', color: '#28c941', icon: <Settings />, link: 'https://github.com/Tamore/PitchControl' },
-                  { title: 'Mission 100', ident: 'UI-100', tags: ['Next.js', 'Framer Motion'], category: 'Web', desc: 'An institutional-grade landing page and dashboard built to document the public trading challenge of turning $100 into $1,000,000.', color: '#ffbd2e', icon: <Smartphone />, link: 'https://github.com/Tamore/Mission-100' },
-                  { title: 'SkillMesh', ident: 'SYS-202', tags: ['Django', 'Python'], category: 'Web', desc: 'Event-Driven Workflow Observation Platform for real-time observability.', color: '#e040a0', icon: <Zap />, link: 'https://github.com/Tamore/SkillMesh' },
-                  { title: 'Agri-Predict', ident: 'ML-707', tags: ['Python', 'ML'], category: 'Data', desc: 'Machine Learning app to forecast crop prices with government data.', color: '#0096cc', icon: <BarChart3 />, link: 'https://github.com/Tamore/Agriculture-Commodity-Price-Prediction' },
-                  { title: 'NomNom', ident: 'APP-404', tags: ['Kotlin', 'Gemini'], category: 'Apps', desc: 'Modern Android recipe discovery app with AI-assisted extraction.', color: '#7c52aa', icon: <Smartphone />, link: 'https://github.com/Tamore/NomNom' },
-                  { title: 'Hash Social', ident: 'WEB-303', tags: ['Django', 'JS'], category: 'Web', desc: 'A robust social media platform for content creation and interaction.', color: '#e040a0', icon: <MessageSquare />, link: 'https://github.com/Tamore/hashapp' },
-                  { title: 'Vault 6.9', ident: 'EC-606', tags: ['WordPress', 'Woo'], category: 'E-commerce', desc: 'Full-scale E-commerce platform with custom payment gateways.', color: '#0096cc', icon: <ShoppingBag />, link: 'https://vault69.in/' },
-                  { title: 'GoPeach', ident: 'SH-101', tags: ['Shopify', 'Liquid'], category: 'E-commerce', desc: 'Optimized dropshipping storefront with conversion focus.', color: '#7c52aa', icon: <Zap />, link: 'https://gopeach.in/' },
-                  { title: 'ASB Tech', ident: 'LP-909', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Conversion landing page for university Online MBA program funnels.', color: '#7c52aa', icon: <LayoutDashboard />, link: 'https://asbtechnologies.com/' },
-                  { title: 'Locks & Lustre', ident: 'WEB-101', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Business showcase website for salon services with local optimization.', color: '#0096cc', icon: <Scissors />, link: 'https://locksandlustresalon.com/' },
-                  { title: 'Dynamic Pages', ident: 'FE-202', tags: ['React', 'JS'], category: 'Web', desc: 'Frontend case study with interactive data visualizations.', color: '#e040a0', icon: <Code2 />, link: 'https://github.com/Tamore/Frontend-Casestudy' }
+                  { title: 'Sahara AI', ident: 'AI-101', tags: ['Next.js', 'AI Agents'], category: 'AI', desc: 'Enterprise-grade Multi-Agent Task Processing Platform with distributed infrastructure.', color: '#0096cc', icon: <TerminalIcon />, github: 'https://github.com/Tamore/ai-task-app', live: '#' },
+                  { title: 'Yomi OS', ident: 'SYS-505', tags: ['Agent Pipeline', 'React'], category: 'AI', desc: 'Autonomous 6-stage AI Agent Pipeline integrated into a cybernetic state management system.', color: '#e040a0', icon: <Cpu />, github: '#', live: '#' },
+                  { title: 'PitchControl', ident: 'SYS-110', tags: ['Next.js', 'AI Agents'], category: 'Web', desc: 'A next-generation AI orchestration platform designed to completely revolutionize stadium operations for the 2026 FIFA World Cup.', color: '#28c941', icon: <Settings />, github: 'https://github.com/Tamore/PitchControl', live: '#' },
+                  { title: 'Mission 100', ident: 'UI-100', tags: ['Next.js', 'Framer Motion'], category: 'Web', desc: 'An institutional-grade landing page and dashboard built to document the public trading challenge of turning $100 into $1,000,000.', color: '#ffbd2e', icon: <Smartphone />, github: 'https://github.com/Tamore/Mission-100', live: '#' },
+                  { title: 'SkillMesh', ident: 'SYS-202', tags: ['Django', 'Python'], category: 'Web', desc: 'Event-Driven Workflow Observation Platform for real-time observability.', color: '#e040a0', icon: <Zap />, github: 'https://github.com/Tamore/SkillMesh', live: '#' },
+                  { title: 'Agri-Predict', ident: 'ML-707', tags: ['Python', 'ML'], category: 'Data', desc: 'Machine Learning app to forecast crop prices with government data.', color: '#0096cc', icon: <BarChart3 />, github: 'https://github.com/Tamore/Agriculture-Commodity-Price-Prediction', live: '#' },
+                  { title: 'NomNom', ident: 'APP-404', tags: ['Kotlin', 'Gemini'], category: 'Apps', desc: 'Modern Android recipe discovery app with AI-assisted extraction.', color: '#7c52aa', icon: <Smartphone />, github: 'https://github.com/Tamore/NomNom', live: '#' },
+                  { title: 'Hash Social', ident: 'WEB-303', tags: ['Django', 'JS'], category: 'Web', desc: 'A robust social media platform for content creation and interaction.', color: '#e040a0', icon: <MessageSquare />, github: 'https://github.com/Tamore/hashapp', live: '#' },
+                  { title: 'Vault 6.9', ident: 'EC-606', tags: ['WordPress', 'Woo'], category: 'E-commerce', desc: 'Full-scale E-commerce platform with custom payment gateways.', color: '#0096cc', icon: <ShoppingBag />, github: '#', live: 'https://vault69.in/' },
+                  { title: 'GoPeach', ident: 'SH-101', tags: ['Shopify', 'Liquid'], category: 'E-commerce', desc: 'Optimized dropshipping storefront with conversion focus.', color: '#7c52aa', icon: <Zap />, github: '#', live: 'https://gopeach.in/' },
+                  { title: 'ASB Tech', ident: 'LP-909', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Conversion landing page for university Online MBA program funnels.', color: '#7c52aa', icon: <LayoutDashboard />, github: '#', live: 'https://asbtechnologies.com/' },
+                  { title: 'Locks & Lustre', ident: 'WEB-101', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Business showcase website for salon services with local optimization.', color: '#0096cc', icon: <Scissors />, github: '#', live: 'https://locksandlustresalon.com/' },
+                  { title: 'Dynamic Pages', ident: 'FE-202', tags: ['React', 'JS'], category: 'Web', desc: 'Frontend case study with interactive data visualizations.', color: '#e040a0', icon: <Code2 />, github: 'https://github.com/Tamore/Frontend-Casestudy', live: '#' }
                 ].filter(p => projectFilter === 'All' || p.category === projectFilter).map((repo, i) => (
                   <motion.div 
                     layout
@@ -462,9 +462,9 @@ const App = () => {
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
                     key={repo.title} 
-                    className="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] h-full"
+                    className="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] flex"
                   >
-                     <div className="relative h-full bg-[#1a111a] border border-white/5 rounded-[32px] flex flex-col overflow-hidden shadow-2xl shadow-pink-900/20 group-hover:border-[#e040a0]/30 transition-all duration-500">
+                     <div className="relative w-full bg-[#1a111a] border border-white/5 rounded-[32px] flex flex-col overflow-hidden shadow-2xl shadow-pink-900/20 group-hover:border-[#e040a0]/30 transition-all duration-500">
                         {/* Terminal Header */}
                         <div className="bg-black/40 px-6 py-3 flex items-center justify-between border-b border-white/5">
                            <div className="flex gap-1.5">
@@ -510,15 +510,27 @@ const App = () => {
                                 ))}
                               </div>
                               
-                              <button 
-                                onClick={() => repo.link !== '#' ? window.open(repo.link, '_blank') : null}
-                                className={`w-full py-3.5 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 ${repo.link === '#' ? 'opacity-60 cursor-not-allowed border-dashed bg-transparent' : 'group/btn hover:bg-[#e040a0] hover:border-[#e040a0]'}`}
-                              >
-                                <span className={`text-[10px] font-black font-mono ${repo.link === '#' ? 'text-[#e040a0] animate-pulse' : 'text-white/60 group-hover/btn:text-white'}`}>
-                                  {repo.link === '#' ? `[BUILDING_EXECUTABLE...]` : `run exec_${repo.title.toLowerCase().replace(' ', '_')}.bin`}
-                                </span>
-                                {repo.link !== '#' && <ExternalLink size={14} className="text-white/40 group-hover/btn:text-white" />}
-                              </button>
+                               <div className="flex gap-2 w-full">
+                                  <button 
+                                    onClick={() => repo.live !== '#' ? window.open(repo.live, '_blank') : null}
+                                    className={`flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 ${repo.live === '#' && repo.github === '#' ? 'opacity-60 cursor-not-allowed border-dashed bg-transparent' : repo.live === '#' ? 'opacity-40 cursor-not-allowed' : 'group/btn hover:bg-[#e040a0] hover:border-[#e040a0]'}`}
+                                  >
+                                    <span className={`text-[9px] font-black font-mono ${repo.live === '#' && repo.github === '#' ? 'text-[#e040a0] animate-pulse' : repo.live === '#' ? 'text-white/40' : 'text-white/70 group-hover/btn:text-white'}`}>
+                                      {repo.live === '#' && repo.github === '#' ? `[BUILDING]` : `LIVE SITE`}
+                                    </span>
+                                    {repo.live !== '#' && <ExternalLink size={12} className="text-white/40 group-hover/btn:text-white" />}
+                                  </button>
+
+                                  <button 
+                                    onClick={() => repo.github !== '#' ? window.open(repo.github, '_blank') : null}
+                                    className={`flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 ${repo.github === '#' ? 'opacity-40 cursor-not-allowed' : 'group/btn2 hover:bg-white hover:border-white'}`}
+                                  >
+                                    <Github size={14} className={repo.github === '#' ? 'text-white/40' : 'text-white/70 group-hover/btn2:text-black'} />
+                                    <span className={`text-[9px] font-black font-mono ${repo.github === '#' ? 'text-white/40' : 'text-white/70 group-hover/btn2:text-black'}`}>
+                                      GITHUB
+                                    </span>
+                                  </button>
+                               </div>
                            </div>
                         </div>
                      </div>
