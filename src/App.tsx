@@ -443,8 +443,8 @@ const App = () => {
                 {[
                   { title: 'Sahara AI', ident: 'AI-101', tags: ['Next.js', 'AI Agents'], category: 'AI', desc: 'Enterprise-grade Multi-Agent Task Processing Platform with distributed infrastructure.', color: '#0096cc', icon: <TerminalIcon />, github: 'https://github.com/Tamore/ai-task-app', live: '#' },
                   { title: 'Yomi OS', ident: 'SYS-505', tags: ['Agent Pipeline', 'React'], category: 'AI', desc: 'Autonomous 6-stage AI Agent Pipeline integrated into a cybernetic state management system.', color: '#e040a0', icon: <Cpu />, github: '#', live: '#' },
-                  { title: 'PitchControl', ident: 'SYS-110', tags: ['Next.js', 'AI Agents'], category: 'Web', desc: 'A next-generation AI orchestration platform designed to completely revolutionize stadium operations for the 2026 FIFA World Cup.', color: '#28c941', icon: <Settings />, github: 'https://github.com/Tamore/PitchControl', live: '#' },
-                  { title: 'Mission 100', ident: 'UI-100', tags: ['Next.js', 'Framer Motion'], category: 'Web', desc: 'An institutional-grade landing page and dashboard built to document the public trading challenge of turning $100 into $1,000,000.', color: '#ffbd2e', icon: <Smartphone />, github: 'https://github.com/Tamore/Mission-100', live: '#' },
+                  { title: 'PitchControl', ident: 'SYS-110', tags: ['Next.js', 'AI Agents'], category: 'Web', desc: 'A next-generation AI orchestration platform designed to completely revolutionize stadium operations for the 2026 FIFA World Cup.', color: '#28c941', icon: <Settings />, github: 'https://github.com/Tamore/PitchControl', live: 'https://pitch-control-mu.vercel.app/' },
+                  { title: 'Mission 100', ident: 'UI-100', tags: ['Next.js', 'Framer Motion'], category: 'Web', desc: 'An institutional-grade landing page and dashboard built to document the public trading challenge of turning $100 into $1,000,000.', color: '#ffbd2e', icon: <Smartphone />, github: 'https://github.com/Tamore/Mission-100', live: 'https://mission-100-livid.vercel.app/' },
                   { title: 'SkillMesh', ident: 'SYS-202', tags: ['Django', 'Python'], category: 'Web', desc: 'Event-Driven Workflow Observation Platform for real-time observability.', color: '#e040a0', icon: <Zap />, github: 'https://github.com/Tamore/SkillMesh', live: '#' },
                   { title: 'Agri-Predict', ident: 'ML-707', tags: ['Python', 'ML'], category: 'Data', desc: 'Machine Learning app to forecast crop prices with government data.', color: '#0096cc', icon: <BarChart3 />, github: 'https://github.com/Tamore/Agriculture-Commodity-Price-Prediction', live: '#' },
                   { title: 'NomNom', ident: 'APP-404', tags: ['Kotlin', 'Gemini'], category: 'Apps', desc: 'Modern Android recipe discovery app with AI-assisted extraction.', color: '#7c52aa', icon: <Smartphone />, github: 'https://github.com/Tamore/NomNom', live: '#' },
@@ -453,7 +453,7 @@ const App = () => {
                   { title: 'GoPeach', ident: 'SH-101', tags: ['Shopify', 'Liquid'], category: 'E-commerce', desc: 'Optimized dropshipping storefront with conversion focus.', color: '#7c52aa', icon: <Zap />, github: '#', live: 'https://gopeach.in/' },
                   { title: 'ASB Tech', ident: 'LP-909', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Conversion landing page for university Online MBA program funnels.', color: '#7c52aa', icon: <LayoutDashboard />, github: '#', live: 'https://asbtechnologies.com/' },
                   { title: 'Locks & Lustre', ident: 'WEB-101', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Business showcase website for salon services with local optimization.', color: '#0096cc', icon: <Scissors />, github: '#', live: 'https://locksandlustresalon.com/' },
-                  { title: 'Dynamic Pages', ident: 'FE-202', tags: ['React', 'JS'], category: 'Web', desc: 'Frontend case study with interactive data visualizations.', color: '#e040a0', icon: <Code2 />, github: 'https://github.com/Tamore/Frontend-Casestudy', live: '#' }
+                  { title: 'Dynamic Pages', ident: 'FE-202', tags: ['React', 'JS'], category: 'Web', desc: 'Frontend case study with interactive data visualizations.', color: '#e040a0', icon: <Code2 />, github: 'https://github.com/Tamore/Frontend-Casestudy', live: 'https://frontend-case-study-one.vercel.app/' }
                 ].filter(p => projectFilter === 'All' || p.category === projectFilter).map((repo, i) => (
                   <motion.div 
                     layout
@@ -511,25 +511,41 @@ const App = () => {
                               </div>
                               
                                <div className="flex gap-2 w-full">
-                                  <button 
-                                    onClick={() => repo.live !== '#' ? window.open(repo.live, '_blank') : null}
-                                    className={`flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 ${repo.live === '#' && repo.github === '#' ? 'opacity-60 cursor-not-allowed border-dashed bg-transparent' : repo.live === '#' ? 'opacity-40 cursor-not-allowed' : 'group/btn hover:bg-[#e040a0] hover:border-[#e040a0]'}`}
-                                  >
-                                    <span className={`text-[9px] font-black font-mono ${repo.live === '#' && repo.github === '#' ? 'text-[#e040a0] animate-pulse' : repo.live === '#' ? 'text-white/40' : 'text-white/70 group-hover/btn:text-white'}`}>
-                                      {repo.live === '#' && repo.github === '#' ? `[BUILDING]` : `LIVE SITE`}
-                                    </span>
-                                    {repo.live !== '#' && <ExternalLink size={12} className="text-white/40 group-hover/btn:text-white" />}
-                                  </button>
+                                  {repo.live === '#' && repo.github === '#' ? (
+                                    <button 
+                                      className="w-full py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 opacity-60 cursor-not-allowed border-dashed bg-transparent transition-all duration-300"
+                                    >
+                                      <span className="text-[9px] font-black font-mono text-[#e040a0] animate-pulse">
+                                        [BUILDING_EXECUTABLE...]
+                                      </span>
+                                    </button>
+                                  ) : (
+                                    <>
+                                      {repo.live !== '#' && (
+                                        <button 
+                                          onClick={() => window.open(repo.live, '_blank')}
+                                          className="flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group/btn hover:bg-[#e040a0] hover:border-[#e040a0]"
+                                        >
+                                          <span className="text-[9px] font-black font-mono text-white/70 group-hover/btn:text-white">
+                                            LIVE SITE
+                                          </span>
+                                          <ExternalLink size={12} className="text-white/40 group-hover/btn:text-white" />
+                                        </button>
+                                      )}
 
-                                  <button 
-                                    onClick={() => repo.github !== '#' ? window.open(repo.github, '_blank') : null}
-                                    className={`flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 ${repo.github === '#' ? 'opacity-40 cursor-not-allowed' : 'group/btn2 hover:bg-white hover:border-white'}`}
-                                  >
-                                    <Github size={14} className={repo.github === '#' ? 'text-white/40' : 'text-white/70 group-hover/btn2:text-black'} />
-                                    <span className={`text-[9px] font-black font-mono ${repo.github === '#' ? 'text-white/40' : 'text-white/70 group-hover/btn2:text-black'}`}>
-                                      GITHUB
-                                    </span>
-                                  </button>
+                                      {repo.github !== '#' && (
+                                        <button 
+                                          onClick={() => window.open(repo.github, '_blank')}
+                                          className="flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group/btn2 hover:bg-white hover:border-white"
+                                        >
+                                          <Github size={14} className="text-white/70 group-hover/btn2:text-black" />
+                                          <span className="text-[9px] font-black font-mono text-white/70 group-hover/btn2:text-black">
+                                            GITHUB
+                                          </span>
+                                        </button>
+                                      )}
+                                    </>
+                                  )}
                                </div>
                            </div>
                         </div>
