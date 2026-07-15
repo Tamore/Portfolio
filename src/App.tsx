@@ -422,7 +422,7 @@ const App = () => {
                    <p className="text-xs text-gray-400 font-bold mt-1 uppercase">A COLLECTION OF MY TECHNICAL VENTURES</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                   {['All', 'Web', 'Apps', 'E-commerce', 'Data'].map(f => (
+                   {['All', 'AI', 'Web', 'Apps', 'E-commerce', 'Data'].map(f => (
                      <button 
                        key={f} 
                        onClick={() => setProjectFilter(f)}
@@ -441,6 +441,8 @@ const App = () => {
              <motion.div layout className="flex flex-wrap justify-center gap-6">
                 <AnimatePresence mode="popLayout">
                 {[
+                  { title: 'Sahara AI', ident: 'AI-101', tags: ['Next.js', 'AI Agents'], category: 'AI', desc: 'Enterprise-grade Multi-Agent Task Processing Platform with distributed infrastructure.', color: '#0096cc', icon: <TerminalIcon />, link: 'https://github.com/Tamore/ai-task-app' },
+                  { title: 'Yomi OS', ident: 'SYS-505', tags: ['Agent Pipeline', 'React'], category: 'AI', desc: 'Autonomous 6-stage AI Agent Pipeline integrated into a cybernetic state management system.', color: '#e040a0', icon: <Cpu />, link: '#' },
                   { title: 'SkillMesh', ident: 'SYS-202', tags: ['Django', 'Python'], category: 'Web', desc: 'Event-Driven Workflow Observation Platform for real-time observability.', color: '#e040a0', icon: <Zap />, link: 'https://github.com/Tamore/SkillMesh' },
                   { title: 'Agri-Predict', ident: 'ML-707', tags: ['Python', 'ML'], category: 'Data', desc: 'Machine Learning app to forecast crop prices with government data.', color: '#0096cc', icon: <BarChart3 />, link: 'https://github.com/Tamore/Agriculture-Commodity-Price-Prediction' },
                   { title: 'NomNom', ident: 'APP-404', tags: ['Kotlin', 'Gemini'], category: 'Apps', desc: 'Modern Android recipe discovery app with AI-assisted extraction.', color: '#7c52aa', icon: <Smartphone />, link: 'https://github.com/Tamore/NomNom' },
@@ -507,11 +509,13 @@ const App = () => {
                               </div>
                               
                               <button 
-                                onClick={() => window.open(repo.link, '_blank')}
-                                className="w-full py-3.5 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center gap-3 group/btn hover:bg-[#e040a0] hover:border-[#e040a0] transition-all duration-300"
+                                onClick={() => repo.link !== '#' ? window.open(repo.link, '_blank') : null}
+                                className={`w-full py-3.5 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 ${repo.link === '#' ? 'opacity-60 cursor-not-allowed border-dashed bg-transparent' : 'group/btn hover:bg-[#e040a0] hover:border-[#e040a0]'}`}
                               >
-                                <span className="text-[10px] font-black text-white/60 group-hover/btn:text-white font-mono">run exec_{repo.title.toLowerCase().replace(' ', '_')}.bin</span>
-                                <ExternalLink size={14} className="text-white/40 group-hover/btn:text-white" />
+                                <span className={`text-[10px] font-black font-mono ${repo.link === '#' ? 'text-[#e040a0] animate-pulse' : 'text-white/60 group-hover/btn:text-white'}`}>
+                                  {repo.link === '#' ? `[BUILDING_EXECUTABLE...]` : `run exec_${repo.title.toLowerCase().replace(' ', '_')}.bin`}
+                                </span>
+                                {repo.link !== '#' && <ExternalLink size={14} className="text-white/40 group-hover/btn:text-white" />}
                               </button>
                            </div>
                         </div>
