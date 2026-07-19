@@ -452,8 +452,7 @@ const App = () => {
                   { title: 'Vault 6.9', ident: 'EC-606', tags: ['WordPress', 'Woo'], category: 'E-commerce', desc: 'Full-scale E-commerce platform with custom payment gateways.', color: '#0096cc', icon: <ShoppingBag />, github: '#', live: 'https://vault69.in/' },
                   { title: 'GoPeach', ident: 'SH-101', tags: ['Shopify', 'Liquid'], category: 'E-commerce', desc: 'Optimized dropshipping storefront with conversion focus.', color: '#7c52aa', icon: <Zap />, github: '#', live: 'https://gopeach.in/' },
                   { title: 'ASB Tech', ident: 'LP-909', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Conversion landing page for university Online MBA program funnels.', color: '#7c52aa', icon: <LayoutDashboard />, github: '#', live: 'https://asbtechnologies.com/' },
-                  { title: 'Locks & Lustre', ident: 'WEB-101', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Business showcase website for salon services with local optimization.', color: '#0096cc', icon: <Scissors />, github: '#', live: 'https://locksandlustresalon.com/' },
-                  { title: 'Dynamic Pages', ident: 'FE-202', tags: ['React', 'JS'], category: 'Web', desc: 'Frontend case study with interactive data visualizations.', color: '#e040a0', icon: <Code2 />, github: 'https://github.com/Tamore/Frontend-Casestudy', live: 'https://frontend-case-study-one.vercel.app/' }
+                  { title: 'Locks & Lustre', ident: 'WEB-101', tags: ['WordPress', 'UI'], category: 'Web', desc: 'Business showcase website for salon services with local optimization.', color: '#0096cc', icon: <Scissors />, github: '#', live: 'https://locksandlustresalon.com/' }
                 ].filter(p => projectFilter === 'All' || p.category === projectFilter).map((repo, i) => (
                   <motion.div 
                     layout
