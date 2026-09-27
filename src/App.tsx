@@ -35,7 +35,9 @@ import {
   Home,
   User,
   Coffee,
-  Smartphone
+  Smartphone,
+  TrendingUp,
+  Server
 } from 'lucide-react';
 
 const App = () => {
@@ -99,7 +101,7 @@ const App = () => {
              </motion.div>
              <div className="min-w-0">
                 <h1 className="text-sm font-black tracking-tight leading-tight truncate">Nirmiti Tamore</h1>
-                <p className="text-[9px] font-bold text-[#e040a0] font-mono uppercase tracking-widest">~/SECURE_ROOT</p>
+                <p className="text-[9px] font-bold text-[#e040a0] font-mono uppercase tracking-widest">~/PORTFOLIO_ROOT</p>
              </div>
           </div>
   
@@ -151,7 +153,7 @@ const App = () => {
               </div>
               <div className="hidden md:flex items-center gap-2 text-xs font-bold text-gray-400">
                  <Coffee size={14} className="text-[#e040a0]" />
-                 <span>Crafting Digital Excellence</span>
+                 <span>Systems & LLM Workflows</span>
               </div>
            </div>
            <div className="flex items-center gap-6">
@@ -182,21 +184,21 @@ const App = () => {
                 
                 <div className="relative z-10 space-y-8">
                    <div className="inline-flex items-center gap-2 bg-[#ffd6ee] px-4 py-1.5 rounded-full border border-pink-100">
-                      <span className="text-[10px] font-black text-[#e040a0] font-mono uppercase tracking-widest">SYSTEM_STABLE</span>
+                      <span className="text-[10px] font-black text-[#e040a0] font-mono uppercase tracking-widest">SYSTEMS_RESEARCH</span>
                    </div>
                    
-                   <div className="space-y-2">
-                     <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none">
-                       Architecting <br />
-                       <span className="text-[#e040a0] italic font-serif font-normal">Resilient</span> <br />
-                       Cloud Systems
+                   <div className="space-y-4">
+                     <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight">
+                       Reliable <br />
+                       <span className="text-[#e040a0] italic font-serif font-normal">Event-Driven</span> <br />
+                       & LLM Systems
                      </h1>
-                     <p className="text-gray-400 max-w-md text-sm md:text-base font-medium leading-relaxed mt-6">
-                       Computer Science graduate specializing in Cloud Technology and Information Security. Focused on the intersection of research and engineering.
+                     <p className="text-gray-600 max-w-xl text-sm md:text-base font-normal leading-relaxed mt-4">
+                       I am a computer science graduate interested in reliable event-driven systems and LLM-assisted workflows. My projects explore application-event observation, asynchronous task processing and model-tool integration. My proposed master’s research concerns failure recovery and duplicate execution in distributed AI workflows.
                      </p>
                    </div>
 
-                   <div className="flex flex-wrap gap-4 pt-4">
+                   <div className="flex flex-wrap gap-4 pt-2">
                       <button 
                         onClick={() => scrollTo('work')}
                         className="bg-[#e040a0] text-white px-10 py-4 rounded-full font-black text-xs flex items-center gap-3 shadow-lg shadow-pink-200 hover:scale-105 transition-transform group"
@@ -214,27 +216,24 @@ const App = () => {
              </motion.div>
 
              <div className="space-y-8">
-                {/* Stats Widget */}
+                {/* Systems Focus Widget */}
                 <div className="bg-[#ffd6ee] p-8 rounded-[40px] border border-pink-200 shadow-lg shadow-pink-100 relative overflow-hidden">
                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#e040a0] mb-6">
                       <Zap size={24} />
                    </div>
-                   <h3 className="text-3xl font-black text-[#a02070]">100%</h3>
-                   <p className="text-[#a02070] font-black text-xs mt-2 uppercase tracking-widest opacity-60">Security Driven</p>
-                   <p className="text-[#a02070]/60 text-[10px] font-medium mt-4 leading-relaxed">
-                     Every line of code is written with a focus on reliability and system integrity.
+                   <h3 className="text-2xl font-black text-[#a02070]">Reliability Focus</h3>
+                   <p className="text-[#a02070] font-black text-xs mt-2 uppercase tracking-widest opacity-70">Research & Engineering</p>
+                   <p className="text-[#a02070]/80 text-[11px] font-medium mt-4 leading-relaxed">
+                     Focusing on event observation, asynchronous worker patterns, and recovery from duplicate execution.
                    </p>
                 </div>
 
                 <div className="bg-[#c8eaff] p-8 rounded-[40px] border border-blue-200 shadow-lg shadow-blue-100">
-                   <h3 className="text-3xl font-black text-[#005580]">10+</h3>
-                   <p className="text-[#005580] font-black text-xs mt-2 uppercase tracking-widest opacity-60">Completed Repos</p>
-                   <div className="mt-8 flex gap-2">
-                      <div className="flex-grow h-2.5 bg-white/40 rounded-full overflow-hidden">
-                        <motion.div initial={{width: 0}} whileInView={{width: '95%'}} className="h-full bg-[#0096cc] rounded-full" />
-                      </div>
-                      <span className="text-[10px] font-black text-[#0096cc]">95%</span>
-                   </div>
+                   <h3 className="text-2xl font-black text-[#005580]">Prototypes & Research</h3>
+                   <p className="text-[#005580] font-black text-xs mt-2 uppercase tracking-widest opacity-70">Experimental Workflows</p>
+                   <p className="text-[#005580]/80 text-[11px] font-medium mt-4 leading-relaxed">
+                     Empirical latency studies, local Gemini tool-use agents, and asynchronous queue architectures.
+                   </p>
                 </div>
              </div>
           </section>
@@ -262,39 +261,49 @@ const App = () => {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-2">
-                   {['SYSTEMS', 'SECURITY', 'CODE'].map(tag => (
+                   {['SYSTEMS', 'EVENT-DRIVEN', 'LLM WORKFLOWS'].map(tag => (
                      <span key={tag} className="px-4 py-1.5 bg-pink-50 text-[#e040a0] text-[9px] font-black rounded-full border border-pink-100">
-                       {tag}
+                        #{tag}
                      </span>
                    ))}
                 </div>
 
-                <p className="text-gray-400 text-sm font-medium leading-relaxed max-w-xs">
-                  Crafting digital experiences where logic meets aesthetics. Specialized in distributed systems and robust terminal-driven architectures.
-                </p>
+                <div className="pt-6 border-t border-gray-100 w-full flex justify-around">
+                   <div className="flex flex-col items-center gap-1">
+                      <GraduationCap className="text-[#e040a0]" size={20} />
+                      <span className="text-[10px] font-black text-gray-400 uppercase">DEGREE</span>
+                      <span className="text-xs font-black">B.Tech (2024)</span>
+                   </div>
+                   <div className="h-8 w-px bg-gray-100" />
+                   <div className="flex flex-col items-center gap-1">
+                      <MapPin className="text-[#7c52aa]" size={20} />
+                      <span className="text-[10px] font-black text-gray-400 uppercase">LOCATION</span>
+                      <span className="text-xs font-black">India</span>
+                   </div>
+                </div>
              </div>
 
-             {/* RIGHT: Candy Terminal Journey */}
-             <div className="lg:col-span-3 bg-[#211520] rounded-[48px] p-10 border border-white/5 shadow-2xl relative overflow-hidden flex flex-col">
-                <div className="flex items-center justify-between mb-10 border-b border-white/5 pb-4">
+             {/* RIGHT: High-Tech Terminal Window */}
+             <div className="lg:col-span-3 bg-[#211520] rounded-[48px] p-8 md:p-12 border border-white/5 shadow-2xl relative flex flex-col justify-between overflow-hidden">
+                <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
                    <div className="flex gap-1.5">
                       <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
                       <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                       <div className="w-2.5 h-2.5 rounded-full bg-[#28c941]" />
                    </div>
-                   <p className="text-[9px] font-mono text-white/20 tracking-widest uppercase">nirmiti@terminal: ~/the-journey</p>
+                   <span className="text-[10px] font-mono text-white/30 tracking-widest uppercase">bash ~ nirmiti@research-station</span>
                 </div>
 
-                <div className="font-mono text-xs space-y-8 leading-relaxed overflow-y-auto">
+                <div className="space-y-6 font-mono text-xs overflow-y-auto">
                    <div className="space-y-6">
                       {/* 1. ABOUT */}
-                      <div className="space-y-4">
+                      <div className="space-y-3">
                          <p className="text-[#e040a0] flex items-center gap-2">
                            <ChevronRight size={14} className="text-[#28c941]" /> 
                            <span className="text-[#7c52aa]">cat</span> about.txt
                          </p>
-                         <p className="text-white/60 pl-6 leading-relaxed">
-                           Computer Science graduate specializing in <span className="text-white">Cloud Technology and Information Security</span>. Working at the intersection of research + engineering—turning ideas into prototypes, stress-testing under real constraints, and documenting learnings clearly.
+                         <p className="text-white/70 pl-6 leading-relaxed">
+                           I am a computer science graduate interested in reliable event-driven systems and LLM-assisted workflows. My projects explore application-event observation, asynchronous task processing and model-tool integration. My proposed master’s research concerns failure recovery and duplicate execution in distributed AI workflows.
                          </p>
                       </div>
 
@@ -317,8 +326,8 @@ const App = () => {
                            <span className="text-[#7c52aa]">cat</span> core_focus.md
                          </p>
                          <div className="pl-6 border-l-2 border-[#e040a0]/20 space-y-2 text-white/70">
-                            <p><span className="text-[#0096cc]"># research_focus:</span> event-driven architecture, distributed systems, microservices, fault tolerance, cloud computing, system reliability</p>
-                            <p><span className="text-[#0096cc]"># current_direction:</span> secure, reliable cloud-native systems, observability, and resilience patterns</p>
+                            <p><span className="text-[#0096cc]"># research_focus:</span> reliable event-driven systems, asynchronous task processing, model-tool integration</p>
+                            <p><span className="text-[#0096cc]"># proposed_masters:</span> failure recovery and duplicate execution in distributed AI workflows</p>
                          </div>
                       </div>
                    </div>
@@ -335,6 +344,7 @@ const App = () => {
                    </h3>
                    <div className="space-y-8">
                       {[
+                        { role: 'AI Coding & Agent Development Specialist', company: 'DFDSOFT — A DogFoodDev Company', date: 'August 2026 – Present · Remote', desc: 'Developing and evaluating autonomous agent workflows, model-tool integration, and AI-assisted engineering systems.' },
                         { role: 'WordPress Developer', company: 'ASB Technologies', date: 'Feb 2025 – Aug 2025', desc: 'Theme customization, speed optimization, and SEO for scalable web solutions.' },
                         { role: 'Web Developer', company: 'The Trading Prophet', date: 'Nov 2021 – Jan 2025', desc: 'Responsive WordPress and Shopify websites, online ads, and technical support.' },
                         { role: 'Cyber Security Intern', company: 'Virtually Testing Foundation', date: 'Apr 2022 – Jul 2022', desc: 'Researched emerging threats and cybersecurity trends.' }
@@ -350,32 +360,45 @@ const App = () => {
                    </div>
                 </div>
 
-                {/* SKILLS MATRIX */}
+                {/* SKILLS MATRIX - Concrete experience without arbitrary percentages */}
                 <div className="bg-white rounded-[48px] p-10 md:p-14 border border-gray-100 shadow-xl shadow-pink-50">
-                   <h3 className="text-xl font-black mb-12 flex items-center gap-3">
-                      <Code2 className="text-[#e040a0]" size={20} /> Skills Matrix
+                   <h3 className="text-xl font-black mb-8 flex items-center gap-3">
+                      <Code2 className="text-[#e040a0]" size={20} /> Technical Competencies
                    </h3>
-                   <div className="space-y-10">
+                   <div className="space-y-6">
                       {[
-                        { name: 'Python, Django, PostgreSQL', val: 95, color: '#e040a0' },
-                        { name: 'React, JS, Kotlin', val: 88, color: '#7c52aa' },
-                        { name: 'AWS, Git, Docker', val: 92, color: '#0096cc' },
-                        { name: 'WordPress, Shopify, Supabase', val: 90, color: '#e040a0' }
+                        { 
+                          category: 'Backend & Systems', 
+                          techs: 'Python, Django, PostgreSQL, Redis', 
+                          experience: 'Event tracking, database schemas, and message queues',
+                          color: '#e040a0' 
+                        },
+                        { 
+                          category: 'Frontend & UI', 
+                          techs: 'React, TypeScript, JavaScript, TailwindCSS', 
+                          experience: 'Interactive interfaces, state management, and real-time visualization',
+                          color: '#7c52aa' 
+                        },
+                        { 
+                          category: 'Cloud & Infrastructure', 
+                          techs: 'Docker, Linux, AWS, Git', 
+                          experience: 'Containerized prototypes, version control, and cloud environments',
+                          color: '#0096cc' 
+                        },
+                        { 
+                          category: 'CMS & Web Development', 
+                          techs: 'WordPress, Shopify, REST APIs', 
+                          experience: 'Theme customization, client deliverables, and API integrations',
+                          color: '#e040a0' 
+                        }
                       ].map(skill => (
-                        <div key={skill.name} className="space-y-3">
-                           <div className="flex justify-between text-[11px] font-black uppercase tracking-widest text-gray-400">
-                             <span>{skill.name}</span>
-                             <span className="text-[#2e1a28]">{skill.val}%</span>
+                        <div key={skill.category} className="p-4 rounded-2xl bg-pink-50/30 border border-pink-100/50 space-y-1.5">
+                           <div className="flex items-center justify-between">
+                             <span className="text-[12px] font-black uppercase tracking-wider text-[#2e1a28]">{skill.category}</span>
+                             <span className="text-[10px] font-mono font-bold" style={{ color: skill.color }}>Hands-on</span>
                            </div>
-                           <div className="h-2.5 bg-gray-50 rounded-full overflow-hidden">
-                              <motion.div 
-                                initial={{ width: 0 }}
-                                whileInView={{ width: `${skill.val}%` }}
-                                transition={{ duration: 1.5 }}
-                                className="h-full rounded-full"
-                                style={{ backgroundColor: skill.color }}
-                              />
-                           </div>
+                           <p className="text-xs font-bold text-[#7c52aa]">{skill.techs}</p>
+                           <p className="text-[11px] text-gray-500 leading-relaxed">{skill.experience}</p>
                         </div>
                       ))}
                    </div>
@@ -419,10 +442,10 @@ const App = () => {
              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                    <h2 className="text-3xl font-black tracking-tight">Featured Projects</h2>
-                   <p className="text-xs text-gray-400 font-bold mt-1 uppercase">A COLLECTION OF MY TECHNICAL VENTURES</p>
+                   <p className="text-xs text-gray-400 font-bold mt-1 uppercase">SYSTEMS OBSERVABILITY, ASYNC PROCESSING & MODEL-TOOL PROTOTYPES</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                   {['All', 'AI', 'Web', 'Apps', 'E-commerce', 'Data'].map(f => (
+                   {['All', 'Systems', 'AI', 'Web', 'Apps', 'Data'].map(f => (
                      <button 
                        key={f} 
                        onClick={() => setProjectFilter(f)}
@@ -441,15 +464,111 @@ const App = () => {
              <motion.div layout className="flex flex-wrap justify-center gap-6">
                 <AnimatePresence mode="popLayout">
                 {[
-                  { title: 'Sahara AI', ident: 'AI-101', tags: ['Next.js', 'AI Agents'], category: 'AI', desc: 'Enterprise-grade Multi-Agent Task Processing Platform with distributed infrastructure.', color: '#0096cc', icon: <TerminalIcon />, github: 'https://github.com/Tamore/ai-task-app', live: '#' },
-                  { title: 'Yomi OS', ident: 'SYS-505', tags: ['Agent Pipeline', 'React'], category: 'AI', desc: 'Autonomous 6-stage AI Agent Pipeline integrated into a cybernetic state management system.', color: '#e040a0', icon: <Cpu />, github: '#', live: '#' },
-                  { title: 'PitchControl', ident: 'SYS-110', tags: ['Next.js', 'AI Agents'], category: 'Web', desc: 'A next-generation AI orchestration platform designed to completely revolutionize stadium operations for the 2026 FIFA World Cup.', color: '#28c941', icon: <Settings />, github: 'https://github.com/Tamore/PitchControl', live: 'https://pitch-control-mu.vercel.app/' },
-                  { title: 'Mission 100', ident: 'UI-100', tags: ['Next.js', 'Framer Motion'], category: 'Web', desc: 'An institutional-grade landing page and dashboard built to document the public trading challenge of turning $100 into $1,000,000.', color: '#ffbd2e', icon: <Smartphone />, github: 'https://github.com/Tamore/Mission-100', live: 'https://mission-100-livid.vercel.app/' },
-                  { title: 'SkillMesh', ident: 'SYS-202', tags: ['Django', 'Python'], category: 'Web', desc: 'Event-Driven Workflow Observation Platform for real-time observability.', color: '#e040a0', icon: <Zap />, github: 'https://github.com/Tamore/SkillMesh', live: 'https://skillmesh.online' },
-                  { title: 'Agri-Predict', ident: 'ML-707', tags: ['Python', 'ML'], category: 'Data', desc: 'Machine Learning app to forecast crop prices with government data.', color: '#0096cc', icon: <BarChart3 />, github: 'https://github.com/Tamore/Agriculture-Commodity-Price-Prediction', live: '#' },
-                  { title: 'NomNom', ident: 'APP-404', tags: ['Kotlin', 'Gemini'], category: 'Apps', desc: 'Modern Android recipe discovery app with AI-assisted extraction.', color: '#7c52aa', icon: <Smartphone />, github: 'https://github.com/Tamore/NomNom', live: '#' },
-                  { title: 'Hash Social', ident: 'WEB-303', tags: ['Django', 'JS'], category: 'Web', desc: 'A robust social media platform for content creation and interaction.', color: '#e040a0', icon: <MessageSquare />, github: 'https://github.com/Tamore/hashapp', live: '#' }
-                ].filter(p => projectFilter === 'All' || p.category === projectFilter).map((repo, i) => (
+                  { 
+                    title: 'SkillMesh', 
+                    ident: 'SYS-202', 
+                    tags: ['Django', 'Python', 'PostgreSQL', 'Redis'], 
+                    category: 'Systems', 
+                    status: 'Published v1 Study; v2 Under Development',
+                    functionality: 'Centralized Django application for observing application events, message delivery stages, and workflow latency across endpoints.',
+                    limitations: 'Live deployment reflects v1 centralized architecture; distributed v2 multi-node extension is currently under local development.',
+                    color: '#e040a0', 
+                    icon: <Zap />, 
+                    github: 'https://github.com/Tamore/SkillMesh', 
+                    live: 'https://skillmesh.online' 
+                  },
+                  { 
+                    title: 'Task Platform (ai-task-app / infra)', 
+                    ident: 'SYS-101', 
+                    tags: ['Express', 'Redis', 'Python', 'MongoDB'], 
+                    category: 'Systems', 
+                    status: 'Prototype / Under Development',
+                    functionality: 'Asynchronous task processing prototype utilizing Express API gateway, Redis work queues, Python background workers, and MongoDB storage.',
+                    limitations: 'Current worker operations perform text transformations rather than live LLM inference; Kubernetes deployment and GitOps configuration remain incomplete.',
+                    color: '#0096cc', 
+                    icon: <Server />, 
+                    github: 'https://github.com/Tamore/ai-task-app', 
+                    live: '#' 
+                  },
+                  { 
+                    title: 'YomiOS', 
+                    ident: 'SYS-505', 
+                    tags: ['Gemini API', 'Tool Calling', 'SQLite', 'React'], 
+                    category: 'AI', 
+                    status: 'Prototype / Work in Progress',
+                    functionality: 'Local productivity prototype integrating Gemini function/tool calling with local database actions and desktop state management.',
+                    limitations: 'Work in progress; tool-use execution is constrained to local prototype actions and active refinement.',
+                    color: '#e040a0', 
+                    icon: <Cpu />, 
+                    github: 'https://github.com/Tamore/YomiOS', 
+                    live: '#' 
+                  },
+                  { 
+                    title: 'CiteX', 
+                    ident: 'RES-301', 
+                    tags: ['Python', 'Retrieval', 'Export'], 
+                    category: 'AI', 
+                    status: 'Prototype / Incomplete Features',
+                    functionality: 'Academic research-workflow prototype providing paper retrieval, structured note organization, and document export.',
+                    limitations: 'Some automated paper synthesis and semantic citation-matching features remain incomplete or template-based.',
+                    color: '#7c52aa', 
+                    icon: <BookOpen />, 
+                    github: 'https://github.com/Tamore/CiteX', 
+                    live: '#' 
+                  },
+                  { 
+                    title: 'PitchControl', 
+                    ident: 'SYS-110', 
+                    tags: ['Next.js', 'Gemini API', 'UI Prototype'], 
+                    category: 'Web', 
+                    status: 'Interface Prototype',
+                    functionality: 'Stadium-operations interface prototype that demonstrates structured Gemini incident responses and simulated fallback scenarios.',
+                    limitations: 'Simulated operations interface; operational activities and fallback events are demonstration scenarios, not real external infrastructure execution.',
+                    color: '#28c941', 
+                    icon: <Settings />, 
+                    github: 'https://github.com/Tamore/PitchControl', 
+                    live: 'https://pitch-control-mu.vercel.app/' 
+                  },
+                  { 
+                    title: 'Backtesting Agent', 
+                    ident: 'AGT-808', 
+                    tags: ['Python', 'FastAPI', 'Automation'], 
+                    category: 'AI', 
+                    status: 'Experimental Prototype / Known Issues',
+                    functionality: 'Browser automation and model-integration prototype designed to interface with charting and backtesting workflows.',
+                    limitations: 'Under active development with known stability issues; does not claim validated trading performance or profitability.',
+                    color: '#ffbd2e', 
+                    icon: <TrendingUp />, 
+                    github: 'https://github.com/Tamore/Backtesting-AI-Agent', 
+                    live: '#' 
+                  },
+                  { 
+                    title: 'Agri-Predict', 
+                    ident: 'ML-707', 
+                    tags: ['Python', 'Scikit-Learn', 'Flask'], 
+                    category: 'Data', 
+                    status: 'Undergraduate final-year project',
+                    functionality: 'Undergraduate academic study exploring the application of machine learning regression algorithms to historical wholesale agricultural commodity prices and market trends.',
+                    limitations: 'Academic curriculum study evaluating existing machine learning approaches; does not represent independent evaluation or deployed production forecasting infrastructure.',
+                    color: '#0096cc', 
+                    icon: <BarChart3 />, 
+                    github: 'https://github.com/Tamore/Agriculture-Commodity-Price-Prediction', 
+                    live: '#' 
+                  },
+                  { 
+                    title: 'NomNom', 
+                    ident: 'APP-404', 
+                    tags: ['Kotlin', 'Android', 'Gemini API'], 
+                    category: 'Apps', 
+                    status: 'Mobile Prototype',
+                    functionality: 'Native Android recipe discovery prototype utilizing Gemini API assistance for extracting ingredients from recipe text.',
+                    limitations: 'Mobile prototype built for personal experimentation and evaluation of on-device LLM parsing.',
+                    color: '#7c52aa', 
+                    icon: <Smartphone />, 
+                    github: 'https://github.com/Tamore/NomNom', 
+                    live: '#' 
+                  }
+                ].filter(p => projectFilter === 'All' || p.category === projectFilter).map((repo) => (
                   <motion.div 
                     layout
                     initial={{ opacity: 0, y: 20 }}
@@ -467,37 +586,53 @@ const App = () => {
                               <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
                               <div className="w-2 h-2 rounded-full bg-[#28c941]" />
                            </div>
-                           <span className="text-[8px] font-mono text-white/20 tracking-[0.2em] uppercase">{repo.category}</span>
+                           <span className="text-[8px] font-mono text-white/40 tracking-[0.2em] uppercase">{repo.category}</span>
                         </div>
 
                         <div className="p-8 flex flex-col flex-grow">
-                           <div className="flex items-start justify-between mb-6">
-                              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                           <div className="flex items-start justify-between mb-4">
+                              <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
                                  <div className="absolute inset-0 bg-gradient-to-tr opacity-20" style={{ backgroundImage: `linear-gradient(45deg, ${repo.color}, transparent)` }} />
-                                 {React.cloneElement(repo.icon as React.ReactElement, { className: 'relative z-10', size: 24, style: { color: repo.color } })}
+                                 {React.cloneElement(repo.icon as React.ReactElement, { className: 'relative z-10', size: 22, style: { color: repo.color } })}
                               </div>
                               <div className="text-right">
-                                 <p className="text-[8px] font-mono text-white/20 uppercase tracking-widest">PID_VAL</p>
+                                 <p className="text-[8px] font-mono text-white/30 uppercase tracking-widest">PID_VAL</p>
                                  <p className="text-[10px] font-mono text-[#e040a0] font-black">{repo.ident}</p>
                               </div>
                            </div>
+
+                           {/* Status Badge */}
+                           <div className="mb-4">
+                              <span className="inline-block text-[9px] font-mono font-bold text-[#ffd6ee] bg-[#e040a0]/20 border border-[#e040a0]/30 px-2.5 py-1 rounded-full">
+                                {repo.status}
+                              </span>
+                           </div>
                            
-                           <div className="space-y-4 flex-grow">
-                              <h3 className="text-xl font-black text-white group-hover:text-[#e040a0] transition-colors tracking-tight">
+                           <div className="space-y-3 flex-grow">
+                              <h3 className="text-lg font-black text-white group-hover:text-[#e040a0] transition-colors tracking-tight">
                                 {repo.title}
                               </h3>
-                              <div className="space-y-2">
-                                 <div className="flex gap-2">
-                                    <span className="text-[#e040a0] font-mono text-[10px]">~/desc:</span>
-                                    <p className="text-[11px] text-white/50 font-medium leading-relaxed font-mono">
-                                      {repo.desc}
+                              
+                              <div className="space-y-2 text-[11px] font-mono leading-relaxed">
+                                 <div>
+                                    <span className="text-[#e040a0] font-bold block mb-0.5">Functionality:</span>
+                                    <p className="text-white/70">
+                                      {repo.functionality}
                                     </p>
                                  </div>
+                                 {repo.limitations && (
+                                   <div>
+                                      <span className="text-pink-300/80 font-bold block mb-0.5">Limitations & Scope:</span>
+                                      <p className="text-white/40">
+                                        {repo.limitations}
+                                      </p>
+                                   </div>
+                                 )}
                               </div>
                            </div>
                            
-                           <div className="mt-8 space-y-6">
-                              <div className="flex flex-wrap gap-2">
+                           <div className="mt-6 space-y-4">
+                              <div className="flex flex-wrap gap-1.5">
                                 {repo.tags.map(t => (
                                   <span key={t} className="text-[9px] font-mono text-[#7c52aa] bg-[#7c52aa]/10 px-2 py-0.5 rounded border border-[#7c52aa]/20">
                                     --{t.toLowerCase()}
@@ -508,10 +643,10 @@ const App = () => {
                                <div className="flex gap-2 w-full">
                                   {repo.live === '#' && repo.github === '#' ? (
                                     <button 
-                                      className="w-full py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 opacity-60 cursor-not-allowed border-dashed bg-transparent transition-all duration-300"
+                                      className="w-full py-3 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 opacity-60 cursor-not-allowed border-dashed bg-transparent transition-all duration-300"
                                     >
-                                      <span className="text-[9px] font-black font-mono text-[#e040a0] animate-pulse">
-                                        [BUILDING_EXECUTABLE...]
+                                      <span className="text-[9px] font-black font-mono text-[#e040a0]">
+                                        [LOCAL_PROTOTYPE]
                                       </span>
                                     </button>
                                   ) : (
@@ -519,10 +654,10 @@ const App = () => {
                                       {repo.live !== '#' && (
                                         <button 
                                           onClick={() => window.open(repo.live, '_blank')}
-                                          className="flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group/btn hover:bg-[#e040a0] hover:border-[#e040a0]"
+                                          className="flex-1 py-3 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group/btn hover:bg-[#e040a0] hover:border-[#e040a0]"
                                         >
                                           <span className="text-[9px] font-black font-mono text-white/70 group-hover/btn:text-white">
-                                            LIVE SITE
+                                            LIVE DEMO
                                           </span>
                                           <ExternalLink size={12} className="text-white/40 group-hover/btn:text-white" />
                                         </button>
@@ -531,11 +666,11 @@ const App = () => {
                                       {repo.github !== '#' && (
                                         <button 
                                           onClick={() => window.open(repo.github, '_blank')}
-                                          className="flex-1 py-3.5 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group/btn2 hover:bg-white hover:border-white"
+                                          className="flex-1 py-3 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group/btn2 hover:bg-white hover:border-white"
                                         >
                                           <Github size={14} className="text-white/70 group-hover/btn2:text-black" />
                                           <span className="text-[9px] font-black font-mono text-white/70 group-hover/btn2:text-black">
-                                            GITHUB
+                                            REPOSITORY
                                           </span>
                                         </button>
                                       )}
@@ -557,29 +692,67 @@ const App = () => {
                 <div className="w-12 h-12 bg-[#ffd6ee] rounded-2xl flex items-center justify-center text-[#e040a0]">
                    <BookOpen size={24} />
                 </div>
-                <h2 className="text-4xl font-black tracking-tight">Scholarly Archives</h2>
+                <div>
+                   <h2 className="text-3xl md:text-4xl font-black tracking-tight">Scholarly Archives</h2>
+                   <p className="text-xs text-gray-400 font-bold mt-1 uppercase">PEER-REVIEWED PAPERS, EMPIRICAL STUDIES & PREPRINT DEPOSITS</p>
+                </div>
              </div>
              
              <div className="flex flex-wrap justify-center gap-6">
                  {[
-                   { title: 'Agriculture Commodity Price Prediction', journal: 'IJIRMPS', year: '2024', link: 'https://www.ijirmps.org/papers/2024/1/230440.pdf' },
-                   { title: 'Event-Driven Distributed Systems’ Security Concerns', journal: 'Zenodo', year: '2026', link: 'https://doi.org/10.5281/zenodo.19236759' },
-                   { title: 'Distributed Platform Cloud-Native Microservice Design Principles', journal: 'Zenodo', year: '2026', link: 'https://doi.org/10.5281/zenodo.19236649' },
-                   { title: 'A Conceptual Framework for Event-Driven Cloud-Native Platforms', journal: 'Zenodo', year: '2026', link: 'https://doi.org/10.5281/zenodo.19236402' },
-                   { title: 'SkillMesh: Analyzing Event-Driven Workflows', journal: 'Zenodo', year: '2026', link: 'https://doi.org/10.5281/zenodo.20059940' }
+                   { 
+                     title: 'Agriculture Commodity Price Prediction', 
+                     type: 'Peer-Reviewed Conference Paper',
+                     venue: 'IJIRMPS (2024)', 
+                     note: 'Undergraduate final-year project paper assessing machine learning regression models for agricultural wholesale market trends. Co-authored based on an externally commissioned undergraduate curriculum project.',
+                     link: 'https://www.ijirmps.org/papers/2024/1/230440.pdf' 
+                   },
+                   { 
+                     title: 'SkillMesh: Analyzing Event-Driven Workflows', 
+                     type: 'Empirical Study / Repository Deposit',
+                     venue: 'Zenodo Deposit (2026)', 
+                     note: 'Empirical research manuscript documenting latency observation, event capture, and pipeline metrics in centralized event-driven web applications.',
+                     link: 'https://doi.org/10.5281/zenodo.20059940' 
+                   },
+                   { 
+                     title: 'Event-Driven Distributed Systems’ Security Concerns', 
+                     type: 'Conceptual Manuscript / Repository Deposit',
+                     venue: 'Zenodo Deposit (2026)', 
+                     note: 'Conceptual analysis exploring security boundaries, authentication challenges, and attack surfaces in event-driven distributed platforms.',
+                     link: 'https://doi.org/10.5281/zenodo.19236759' 
+                   },
+                   { 
+                     title: 'Distributed Platform Cloud-Native Microservice Design Principles', 
+                     type: 'Conceptual Manuscript / Repository Deposit',
+                     venue: 'Zenodo Deposit (2026)', 
+                     note: 'Exploratory conceptual overview synthesizing architectural principles, decoupling techniques, and resilience patterns in microservice environments.',
+                     link: 'https://doi.org/10.5281/zenodo.19236649' 
+                   },
+                   { 
+                     title: 'A Conceptual Framework for Event-Driven Cloud-Native Platforms', 
+                     type: 'Conceptual Manuscript / Repository Deposit',
+                     venue: 'Zenodo Deposit (2026)', 
+                     note: 'Conceptual framework discussing component composition, event orchestration, and asynchronous coordination in cloud-native settings.',
+                     link: 'https://doi.org/10.5281/zenodo.19236402' 
+                   }
                  ].map((pub, i) => (
                   <div key={i} className="bg-white p-8 rounded-[40px] border border-gray-50 shadow-lg shadow-gray-200/50 hover:border-[#e040a0] transition-all group hover:-translate-y-1 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] flex flex-col">
-                     <p className="text-[10px] font-black text-[#e040a0] font-mono mb-4">ZENODO_REF_0{i+1}</p>
-                     <h3 className="text-xl font-black mb-6 leading-tight group-hover:text-[#e040a0] transition-colors">{pub.title}</h3>
-                     <div className="flex justify-between items-center text-[10px] font-bold text-gray-400 mb-6">
-                        <span>{pub.journal}</span>
-                        <span className="text-[#7c52aa]">{pub.year}</span>
+                     <div className="flex items-center justify-between mb-3">
+                        <span className="text-[9px] font-black text-[#e040a0] font-mono uppercase bg-pink-50 px-2 py-0.5 rounded border border-pink-100">
+                          {pub.type}
+                        </span>
+                        <span className="text-[10px] font-mono text-gray-400 font-bold">REF_0{i+1}</span>
+                     </div>
+                     <h3 className="text-lg font-black mb-3 leading-snug group-hover:text-[#e040a0] transition-colors">{pub.title}</h3>
+                     <p className="text-xs text-gray-500 mb-4 leading-relaxed flex-grow">{pub.note}</p>
+                     <div className="flex justify-between items-center text-[10px] font-bold text-gray-400 mb-6 pt-3 border-t border-gray-100">
+                        <span className="font-mono text-[#7c52aa]">{pub.venue}</span>
                      </div>
                      <button 
                        onClick={() => window.open(pub.link, '_blank')}
                        className="mt-auto w-full py-3 bg-[#fdf2f8] text-[#e040a0] rounded-2xl text-[10px] font-black hover:bg-[#e040a0] hover:text-white transition-all flex items-center justify-center gap-2"
                      >
-                       Read Publication <FileText size={14} />
+                       Read Manuscript / Paper <FileText size={14} />
                      </button>
                   </div>
                 ))}
@@ -591,7 +764,7 @@ const App = () => {
              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,#e040a030_0%,transparent_50%)]" />
              <div className="relative z-10 space-y-6">
                 <h2 className="text-4xl md:text-5xl font-black text-white">Ready to collaborate?</h2>
-                <p className="text-white/60 font-medium max-w-xl mx-auto">Currently open to research opportunities in distributed systems and cloud security.</p>
+                <p className="text-white/60 font-medium max-w-xl mx-auto">Currently open to master's research opportunities and collaborations in reliable event-driven systems and distributed AI workflows.</p>
                 <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
                    <button 
                      onClick={() => window.location.href = 'mailto:nirmititamore@gmail.com'}
@@ -619,12 +792,12 @@ const App = () => {
 
           {/* FOOTER - CENTERED */}
           <footer className="pt-10 border-t border-gray-100 flex flex-col items-center justify-center gap-4 text-center">
-             <p className="text-[10px] font-black text-gray-300 uppercase tracking-widest">
+             <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
                Copyright © 2026 Nirmiti Tamore. All Rights Reserved.
              </p>
-             <div className="flex gap-8 text-[9px] font-black text-purple-200 uppercase tracking-widest">
+             <div className="flex gap-8 text-[9px] font-black text-purple-300 uppercase tracking-widest">
                 <span>PORTFOLIO_V2.4.0</span>
-                <span>SYSTEM_SECURE</span>
+                <span>SYSTEM_STATUS: NOMINAL</span>
              </div>
           </footer>
         </div>
